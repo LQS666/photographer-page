@@ -167,3 +167,84 @@ a:hover {
     opacity: 1;
     left: -35px;
 }
+
+
+
+/* O mnie */
+
+body.o-mnie-on .hero-section {
+    transform: scale(0.8);
+    transition-delay: 0ms;
+}
+
+.o-mnie-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgba(31, 32, 41, 1);
+    transform: translateX(-100%);
+    transition: all .3s linear;
+    z-index: 10;
+}
+
+.o-mnie-contaier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.o-mnie-on .o-mnie-section {
+    transform: translateX(0);
+    transition-delay: .4s;
+}
+
+.o-mnie-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    transition: all .2s linear;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 36px;
+    background-image: url('../svg/cross.svg');
+    cursor: pointer;
+    z-index: 11;
+}
+
+.o-mnie-close:hover {
+    transform: rotate(90deg);
+}
+
+
+.o-mnie-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.o-mnie-section p {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+.o-mnie-section p span {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    color: #f1c40f;
+    font-size: 25px;
+    font-weight: 400;
+}
