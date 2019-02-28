@@ -250,6 +250,7 @@ body.o-mnie-on .o-mnie-section {
 }
 
 /* Kontakt */
+
 body.contact-on .hero-section {
     transform: scale(0.8);
     transition-delay: 0ms;
@@ -340,4 +341,91 @@ body.contact-on .contact-section {
         font-size: 13px;
         letter-spacing: 0;
     }
+}
+
+/* Galeria */
+
+body.gallery-on .hero-section {
+    transform: rotateX(-20deg);
+    transition-delay: 0ms;
+}
+
+.gallery-section {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    background-color: rgba(31, 32, 41, 1);
+    transition: all .3s linear;
+    z-index: 10;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    transition: all .2s linear;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 36px 36px;
+    background-image: url('../svg/cross.svg');
+    cursor: pointer;
+    z-index: 11;
+}
+
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-box div {
+    flex-basis: 33%;
+}
+
+@media screen and (max-width: 1000px) {
+    .gallery-box div {
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .gallery-box div {
+        flex-basis: 100%;
+    }
+}
+
+.gallery-close:hover {
+    transform: rotate(90deg);
+}
+
+body.gallery-on .gallery-section {
+    top: 0;
+    transition-delay: .4s;
+}
+
+.gallery-section img {
+    margin-top: 10px;
+    max-width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.gallery-section h3 {
+    display: block;
+    text-align: center;
+    font-size: 44px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
 }
